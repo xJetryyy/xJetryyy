@@ -352,7 +352,6 @@ player.Properties.Scores.Value -= 15;
 
 player.Properties.Get("СТАТУС").Value = "Legend";
 contextedProperties.GetContext(player).MaxHp.Value = 500;
-player.inventory.Melee.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -383,7 +382,6 @@ return;
 player.Properties.Scores.Value -= 20;
 player.Properties.Get("СТАТУС").Value = "Genius";
 contextedProperties.GetContext(player).MaxHp.Value = 1000;
-player.inventory.Secondary.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -415,7 +413,6 @@ player.Properties.Scores.Value -= 35;
 
 player.Properties.Get("СТАТУС").Value = "Sokol";
 contextedProperties.GetContext(player).MaxHp.Value = 1250;
-player.inventory.SecondaryInfinity.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -447,8 +444,6 @@ player.Properties.Scores.Value -= 55;
 
 player.Properties.Get("СТАТУС").Value = "Furry";
 contextedProperties.GetContext(player).MaxHp.Value = 1550;
-player.inventory.Melee.Value = true;
-player.inventory.SecondaryInfinity.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -480,7 +475,6 @@ player.Properties.Scores.Value -= 100;
 
 player.Properties.Get("СТАТУС").Value = "Flash";
 contextedProperties.GetContext(player).MaxHp.Value = 2000;
-player.inventory.Main.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -542,7 +536,6 @@ player.Properties.Scores.Value -= 110;
 
 player.Properties.Get("СТАТУС").Value = "Thor";
 contextedProperties.GetContext(player).MaxHp.Value = 2250;
-player.inventory.MainInfinity.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -574,8 +567,6 @@ player.Properties.Scores.Value -= 125;
 
 player.Properties.Get("СТАТУС").Value = "Ohio";
 contextedProperties.GetContext(player).MaxHp.Value = 2550;
-player.inventory.MainInfinity.Value = true;
-player.inventory.SecondaryInfinity.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -607,9 +598,6 @@ player.Properties.Scores.Value -= 150;
 
 player.Properties.Get("СТАТУС").Value = "<size=30><color=#fff700>O</color><color=#ffdf00>m</color><color=#ffc700>n</color><color=#ffaf00>i</color><color=#ff9700>p</color><color=#ff7f00>o</color><color=#ff6700>t</color><color=#ff4f00>e</color><color=#ff3700>n</color><color=#ff1f00>t</color></size>";
 contextedProperties.GetContext(player).MaxHp.Value = 3000;
-player.inventory.Melee.Value = true;
-player.inventory.SecondaryInfinity.Value = true;
-player.inventory.MainInfinity.Value = true;
 
 player.Ui.Hint.Reset()
 
@@ -788,7 +776,7 @@ var ss = AreaPlayerTriggerService.Get("ss");
 ss.Tags = ["ss"];
 ss.Enable = true;
 ss.OnEnter.Add(function(player, area){
-player.Ui.Hint.Value = "Сервер был создан в 20:23 мск!";
+player.Ui.Hint.Value = "Сервер был создан в 18:00 мск!";
 });
 
 LeaderBoard.PlayerLeaderBoardValues = 
