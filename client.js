@@ -1,4 +1,4 @@
-//// ��������� ��������� �������� ������� 
+// функции 
 Damage.GetContext().FriendlyFire.Value = true;
 Damage.GetContext().DamageOut.Value = GameMode.Parameters.GetBool("Damage"); 
 BreackGraph.OnlyPlayerBlocksDmg = true; 
@@ -7,7 +7,7 @@ Build.GetContext().FloodFill.Value = GameMode.Parameters.GetBool("FloodFill");
 Build.GetContext().FillQuad.Value = GameMode.Parameters.GetBool("FillQuad"); 
 Build.GetContext().RemoveQuad.Value = GameMode.Parameters.GetBool("RemoveQuad"); 
 Build.GetContext().FlyEnable.Value = false; 
-// создаем 11 команд 
+// создаем команды
 red = GameMode.Parameters.GetBool("RedTeam"); 
 blue = GameMode.Parameters.GetBool("BlueTeam"); 
 if (red || !red && !blue) { 
@@ -18,11 +18,11 @@ if (blue || !red && !blue) {
 Teams.Add("Blue", "<size=30><color=#1a00ff>G</color><color=#3300e3>O</color><color=#4c00c7>O</color><color=#6500ab>D</color><color=#7e008f> </color><color=#970073>G</color><color=#b00057>A</color><color=#c9003b>M</color><color=#e2001f>E</color></size>", {p: 22}); 
 Teams.Get("Blue").Spawns.SpawnPointsGroups.Add(1);      
 }
-// ������ ��������� ������ ��� ����� 
+// разрушение блоков 1
 BreackGraph.BreackAll = true; 
-// ���������� ���������� ������ 
+// разрушение блоков 2
 Ui.GetContext().QuadsCount.Value = false; 
-// ��� ������������ ����� 
+// команды
 Build.GetContext().Pipette.Value = false; 
 Build.GetContext().BalkLenChange.Value = false; 
 Build.GetContext().SetSkyEnable.Value = false; 
@@ -36,11 +36,11 @@ Build.GetContext().ChangeMapAuthorsEnable.Value = false;
 Build.GetContext().LoadMapEnable.Value = false; 
 Build.GetContext().ChangeSpawnsEnable.Value = false; 
 
-// ��������� ���� 
+// гейм мод игры
 Properties.GetContext().GameModeName.Value = "GameModes/Peace"; 
 // ������� �������
 
-// ��������� ���� � ������� �� ������� 
+// основные команды
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player) 
 player.Ui.Hint.Value = "Приветствую!" 
 if (player.id == "802EBF4E1E728B78" || player.id == "461169843AD27D0C" || player.id == "9FC9586F5D45865E" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player. id == ""){ 
@@ -74,7 +74,7 @@ player.Properties.Get("admin").Value = 2;
 player.Properties.Get("СТАТУС").Value = "<size=30><color=#fff700>A</color><color=#ffc600>D</color><color=#ff9500>M</color><color=#ff6400>I</color><color=#ff3300>N</color></size>";
 player.Properties.Get("AC").Value = "<size=30><color=#860000>I</color><color=#ae0004>n</color><color=#d60008>f</color></size>";
 
-
+// проверочная зона
 var hint = AreaPlayerTriggerService.Get("hint");
 hint.Tags = ["hint"];
 hint.Enable = true;
@@ -83,10 +83,10 @@ player.Ui.Hint.Value = "Hi";
 });
 }
 });
-// ��������� ���� � ������� �� ������� 
+// разрешение на вход в команду
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);});
 
-// ����� �� ����� � ������� 
+// спавн игроков
 Teams.OnPlayerChangeTeam.Add(function(player){ player.Spawns.Spawn()});
 
 
@@ -100,10 +100,10 @@ var maxDeaths2 = "<b>РЕЖИМ</b>";
 Teams.Get("Red").Properties.Get("Deaths").Value = maxDeaths; 
 Teams.Get("Blue").Properties.Get("Deaths").Value = maxDeaths2;
 
-// ������ ��������� 
+// подсказка
 Ui.getContext().Hint.Value = "<B>Приветсвую!</B>"; 
 
-// ������������ ��������� 
+// мнвентарь обычных игроков
 var inventory = Inventory.GetContext(); 
 inventory.Main.Value = false; 
 inventory.Secondary.Value = false;
@@ -113,12 +113,13 @@ inventory.Explosive.Value = false;
 inventory.Build.Value = false; 
 inventory.BuildInfinity.Value = false; 
 
-// ��������� ��� ������ ����� 
+// очистка блоков
 Build.GetContext().BlocksSet.Value = BuildBlocksSet.AllClear; 
 
-// ������������ ����� 
+// время респавна
 Spawns.GetContext().RespawnTime.Value = 0; 
 
+// основные зоны
 var LLAreaTag = "Очки"; 
 
 var llTrigger = AreaPlayerTriggerService.Get("nazva"); 
