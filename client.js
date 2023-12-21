@@ -123,7 +123,7 @@ setRandMurd();
   Prop: "Deaths" 
  }; 
 defTickTimer.RestartLoop(1); 
- mainTimer.Restart(220); 
+ mainTimer.Restart(360); 
 } 
  
 function SetEndOfMatchMode() { 
