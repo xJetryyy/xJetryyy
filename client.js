@@ -43,7 +43,7 @@ Properties.GetContext().GameModeName.Value = "GameModes/Peace";
 // ��������� ���� � ������� �� ������� 
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player) 
 player.Ui.Hint.Value = "Приветствую!" 
-if (player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player. id == ""){ 
+if (player.id == "3AC8347B255B9D2E" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player.id == "" || player. id == ""){ 
 player.inventory.MainInfinity.Value = true; 
 player.inventory.Main.Value = true; 
 player.inventory.Melee.Value = true; 
