@@ -4,13 +4,13 @@ import * as teams from './default_teams.js';
 import * as default_timer from './default_timer.js';
 
 // настройки
-const WaitingPlayersTime = 0; // 5s
-const BuildBaseTime = 0; // 5s
-const KnivesModeTime = 0; // 10s
+const WaitingPlayersTime = 5; // 5s
+const BuildBaseTime = 5; // 5s
+const KnivesModeTime = 10; // 10s
 const GameModeTime = default_timer.game_mode_length_seconds();
-const MockModeTime = 0; // 20s
-const EndOfMatchTime = 0; // 5s
-const VoteTime = 0; // 20s
+const MockModeTime = 20; // 20s
+const EndOfMatchTime = 5; // 5s
+const VoteTime = 20; // 20s
 
 const KILL_SCORES = 5;
 const WINNER_SCORES = 10;
