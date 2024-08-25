@@ -184,10 +184,10 @@ function SetKnivesMode() {
 	stateProp.Value = KnivesModeStateValue;
 	Ui.GetContext().Hint.Value = "Hint/KnivesMode";
 	var inventory = Inventory.GetContext();
-	inventory.Main.Value = false;
-	inventory.Secondary.Value = false;
+	inventory.Main.Value = true;
+	inventory.Secondary.Value = true;
 	inventory.Melee.Value = true;
-	inventory.Explosive.Value = false;
+	inventory.Explosive.Value = true;
 	inventory.Build.Value = true;
 	// разрешение нанесения урона
 	Damage.GetContext().DamageOut.Value = true;
